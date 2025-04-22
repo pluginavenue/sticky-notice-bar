@@ -20,7 +20,7 @@ A simple, lightweight WordPress plugin that displays a dismissible site-wide ban
 
 ### 2. Settings Panel in WordPress Admin
 
-![Settings Screenshot](https://raw.githubusercontent.com/pluginavenue/sticky-notice-bar/main/assets/screenshot-3.png)
+![Settings Screenshot](https://raw.githubusercontent.com/pluginavenue/sticky-notice-bar/main/assets/screenshot-2.png)
 
 ## 🔧 Getting Started
 
