@@ -1,0 +1,17 @@
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore IDE/editor config
+.vscode/
+*.code-workspace
+
+# Ignore build files
+*.zip
+
+# Ignore WordPress-specific cache/logs
+*.log
+*.sql
+wp-content/cache/
+wp-content/backups/
