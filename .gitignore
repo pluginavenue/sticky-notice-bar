@@ -1,17 +1,33 @@
-# Ignore OS/system files
+# Ignore node/npm files
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Ignore macOS system files
 .DS_Store
-Thumbs.db
-desktop.ini
 
 # Ignore IDE/editor config
 .vscode/
-*.code-workspace
+.idea/
 
-# Ignore build files
+# Ignore OS/hidden/system files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Ignore WordPress core or build files (if not needed)
+wp-config.php
+.htaccess
+
+# Ignore zip and backup files
 *.zip
+*.bak
+*.tmp
+*.tar.gz
 
-# Ignore WordPress-specific cache/logs
+# Ignore log files
 *.log
-*.sql
-wp-content/cache/
-wp-content/backups/
+debug.log
+
+# Ignore Git itself
+.git/
