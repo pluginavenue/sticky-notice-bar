@@ -2,8 +2,6 @@
 
 A simple, lightweight WordPress plugin that displays a dismissible site-wide banner for announcements, promotions, or alerts.
 
-![Banner Screenshot](https://pluginavenue.com/wp-content/uploads/2025/04/sticky-notice-bar-banner.png)
-
 ## 🚀 Features
 
 - Custom message text
@@ -14,10 +12,20 @@ A simple, lightweight WordPress plugin that displays a dismissible site-wide ban
 - Works with any WordPress theme
 - Lightweight and fast
 
+## 📸 Screenshots
+
+### 1. Notice bar at the top of the site
+
+![Notice Bar Screenshot](https://raw.githubusercontent.com/pluginavenue/sticky-notice-bar/main/assets/screenshot-1.png)
+
+### 2. Settings Panel in WordPress Admin
+
+![Settings Screenshot](https://raw.githubusercontent.com/pluginavenue/sticky-notice-bar/main/assets/screenshot-3.png)
+
 ## 🔧 Getting Started
 
 1. Upload the plugin to your WordPress site's `/wp-content/plugins/` directory.
-2. Activate via **Plugins > Sticky Notice Bar**.
+2. Activate via the **Plugins** menu.
 3. Navigate to **Settings > Sticky Notice Bar** to configure.
 
 ## 💡 Pro Features (Optional)
