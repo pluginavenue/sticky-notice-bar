@@ -1,0 +1,91 @@
+/* Sticky Notice Bar Container */
+#snb-notice-bar {
+  box-sizing: border-box;
+  font-family: inherit;
+  width: 100%;
+  z-index: 9999;
+  padding: 1rem 0;
+  color: #ffffff;
+  background-color: #f97316;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dismiss button */
+#snb-dismiss {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: inherit;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Flex container for layout */
+#snb-notice-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* CTA Button */
+.snb-cta-button {
+  padding: 6px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.snb-cta-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Pro Tagline */
+.snb-pro-content {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  #snb-notice-bar-inner {
+    flex-direction: row;
+    padding: 0 0.5rem;
+  }
+
+  #snb-dismiss {
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+#snb-notice-bar.top {
+  top: 0;
+  bottom: auto;
+}
+
+#snb-notice-bar.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+#snb-notice-bar.snb-hidden {
+  display: none !important;
+}
