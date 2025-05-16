@@ -1,10 +1,11 @@
 === Sticky Notice Bar ===
-Contributors: scottmoore
-Tags: notice, banner, alert, announcement, message bar, sticky header
+Contributors: scottmoore, pluginavenue
+Tags: notice, alert, announcement, banner, sticky
 Requires at least: 5.6
-Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.5
+Author: Plugin Avenue
+Tested up to: 6.8
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Plugin URI: https://pluginavenue.com/plugins/sticky-notice-bar

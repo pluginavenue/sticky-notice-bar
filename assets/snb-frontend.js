@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const version = bar.dataset.version || "1";
   const position = bar.dataset.position || "top";
-  const dismissed = localStorage.getItem("snb_dismissed_version");
+  const dismissed = localStorage.getItem("stickynotice_dismissed_version");
 
   if (dismissed === version) {
     bar.remove();
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (dismiss) {
     dismiss.addEventListener("click", () => {
-      localStorage.setItem("snb_dismissed_version", version);
+      localStorage.setItem("stickynotice_dismissed_version", version);
       bar.remove();
       if (position === "top") {
         document.body.style.paddingTop = "0";
