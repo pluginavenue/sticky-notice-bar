@@ -82,14 +82,14 @@ add_action('admin_enqueue_scripts', 'stickynotice_admin_enqueue_scripts');
 function stickynotice_enqueue_frontend_scripts() {
     wp_enqueue_style(
         'snb-style',
-        stickynotice_PLUGIN_URL . 'assets/snb-style.css',
+        STICKYNOTICE_PLUGIN_URL . 'assets/snb-style.css',
         [],
         '1.0'
     );
 
     wp_enqueue_script(
         'snb-frontend',
-        stickynotice_PLUGIN_URL . 'assets/snb-frontend.js',
+        STICKYNOTICE_PLUGIN_URL . 'assets/snb-frontend.js',
         [],
         '1.0',
         true
@@ -99,7 +99,6 @@ add_action('wp_enqueue_scripts', 'stickynotice_enqueue_frontend_scripts');
 
 // === Render settings page
 function stickynotice_settings_page() {
-    $pro_active = defined('stickynotice_PREMIUM') && stickynotice_PREMIUM;
     ?>
     <div class="wrap">
         <h1>Sticky Notice Bar Settings</h1>
@@ -134,22 +133,22 @@ function stickynotice_settings_page() {
                     <th scope="row">End Date</th>
                     <td><input type="date" name="stickynotice_end_date" value="<?php echo esc_attr(get_option('stickynotice_end_date')); ?>" /></td>
                 </tr>
-            
+
                 <?php do_action('stickynotice_after_settings_fields'); ?>
             </table>
 
             <?php submit_button(); ?>
         </form>
-        
-        <?php if (!$pro_active): ?>
+
+        <?php if (!defined('STICKYNOTICE_PREMIUM') || !STICKYNOTICE_PREMIUM): ?>
         <div class="snb-upgrade-box">
             <h3>
-                <img src="<?php echo esc_url(plugin_dir_url(__DIR__) . 'assets/pluginavenue-icon.png'); ?>" alt="" style="width: 24px; height: 24px; vertical-align: middle;" />
+                <img src="<?php echo esc_url(STICKYNOTICE_PLUGIN_URL . 'assets/pluginavenue-icon.png'); ?>" alt="" style="width: 24px; height: 24px; vertical-align: middle;" />
                 Upgrade to Sticky Notice Bar Pro
             </h3>
             <ul>
                 <li>🎯 Display at top or bottom</li>
-                <li>📅 Set recurring schedules</li>
+                <li>🗕 Set recurring schedules</li>
                 <li>🗂 Target specific pages</li>
                 <li>✨ Add icons, animations, and more</li>
             </ul>
@@ -179,7 +178,7 @@ function stickynotice_display_notice_bar() {
     $start    = get_option('stickynotice_start_date');
     $end      = get_option('stickynotice_end_date');
     $position = strtolower(trim(sanitize_text_field(get_option('stickynotice_position', 'top'))));
-    $now      = gmdate('Y-m-d'); // still unmodified
+    $now      = gmdate('Y-m-d');
 
     if (($start && $now < $start) || ($end && $now > $end)) return;
     if (!in_array($position, ['top', 'bottom'], true)) {
