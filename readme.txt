@@ -1,5 +1,5 @@
 === Sticky Notice Bar ===
-Contributors: scottmoore, pluginavenue
+Contributors: pluginavenue
 Tags: notice, alert, announcement, banner, sticky
 Requires at least: 5.6
 Requires PHP: 7.4
